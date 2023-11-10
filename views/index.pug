@@ -1,0 +1,121 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Koibanx
+    script(src="https://cdn.tailwindcss.com")
+    link(rel='stylesheet' href='/css/index.css')
+    link(rel="icon" href="/img/logo.png" type="image/x-icon")
+  body#todo-list
+    section(class="w-2/3 mx-auto")
+      img(src="/img/banner.png" class="mx-auto")
+      form(hx-post="/stats" hx-push-url="true" hx-swap="outerHTML")
+        p.font-bold.text-2xl.mt-5 ¡Apreciamos mucho que seas parte de nuestra comunidad!
+        p.mt-8 Tu confianza nos motiva a mejorar continuamente y tu opinión es fundamental para nosotros. 
+        p.mt-5 Te compartimos nuestra encuesta de satisfacción y agradecemos dediques un momento para evaluar la calidad de nuestro servicio y cómo percibes que Neomoon te beneficia:
+
+        p.mt-5.font-bold.text-xl ¿Cuál es tu experiencia usando Neomoon?
+        p.mt-5 1. Uso de cada sección del dashboard y realizar las acciones que necesitas
+        .flex.justify-center.mt-5.asks
+          .mx-3
+            input(type="radio" name="ask1" id="option1" class="input-hidden" value="muy-facil")
+            label(for="option1")
+              .option
+                p.text-center.text-2xl 😁
+                p.text-center Muy facil
+          .mx-3
+            input(type="radio" name="ask1" id="option2" class="input-hidden" value="facil")
+            label(for="option2")
+              .option
+                p.text-center.text-2xl 😌
+                p.text-center Facil
+          .mx-3
+            input(type="radio" name="ask1" id="option3" class="input-hidden" value="neutral")
+            label(for="option3")
+              .option
+                p.text-center.text-2xl 😐
+                p.text-center Neutral
+          .mx-3
+            input(type="radio" name="ask1" id="option4" class="input-hidden" value="dificil")
+            label(for="option4")
+              .option
+                p.text-center.text-2xl 🙁
+                p.text-center Dificil
+          .mx-3
+            input(type="radio" name="ask1" id="option5" class="input-hidden" value="muy-dificil")
+            label(for="option5")
+              .option
+                p.text-center.text-2xl 😣
+                p.text-center Muy dificil
+        p.mt-5 2. Facilidad para entender los balances en sección de Inicio
+        .flex.justify-center.mt-5.asks
+          .mx-3
+            input(type="radio" name="ask2" id="option21" class="input-hidden" value="muy-facil")
+            label(for="option21")
+              .option
+                p.text-center.text-2xl 😁
+                p.text-center Muy facil
+          .mx-3
+            input(type="radio" name="ask2" id="option22" class="input-hidden" value="facil")
+            label(for="option22")
+              .option
+                p.text-center.text-2xl 😌
+                p.text-center Facil
+          .mx-3
+            input(type="radio" name="ask2" id="option23" class="input-hidden" value="neutral")
+            label(for="option23")
+              .option
+                p.text-center.text-2xl 😐
+                p.text-center Neutral
+          .mx-3
+            input(type="radio" name="ask2" id="option24" class="input-hidden" value="dificil")
+            label(for="option24")
+              .option
+                p.text-center.text-2xl 🙁
+                p.text-center Dificil
+          .mx-3
+            input(type="radio" name="ask2" id="option25" class="input-hidden" value="muy-dificil")
+            label(for="option25")
+              .option
+                p.text-center.text-2xl 😣
+                p.text-center Muy dificil
+        p.mt-5 3. Consulta y búsqueda de operaciones
+        .flex.justify-center.mt-5.asks
+          .mx-3
+            input(type="radio" name="ask3" id="option31" class="input-hidden" value="muy-facil")
+            label(for="option31")
+              .option
+                p.text-center.text-2xl 😁
+                p.text-center Muy facil
+          .mx-3
+            input(type="radio" name="ask3" id="option32" class="input-hidden" value="facil")
+            label(for="option32")
+              .option
+                p.text-center.text-2xl 😌
+                p.text-center Facil
+          .mx-3
+            input(type="radio" name="ask3" id="option33" class="input-hidden" value="neutral")
+            label(for="option33")
+              .option
+                p.text-center.text-2xl 😐
+                p.text-center Neutral
+          .mx-3
+            input(type="radio" name="ask3" id="option34" class="input-hidden" value="dificil")
+            label(for="option34")
+              .option
+                p.text-center.text-2xl 🙁
+                p.text-center Dificil
+          .mx-3
+            input(type="radio" name="ask3" id="option35" class="input-hidden" value="muy-dificil")
+            label(for="option35")
+              .option
+                p.text-center.text-2xl 😣
+                p.text-center Muy dificil
+        p.mt-10.font-bold.text-xl ¿Tienes algún comentario adicional para mejorar tu experiencia? 
+        p.mt-2 Cuéntanos en este espacio.
+        textarea(class="w-full border" rows="6" name="extra")
+        .text-center.mt-5.mb-10
+          input.px-3.py-2.bg-orange-600.text-white.rounded-md(type="submit" value="Enviar")
+    script(src='https://unpkg.com/htmx.org@1.3.1')
+    script(src='https://unpkg.com/hyperscript.org@0.0.5')
